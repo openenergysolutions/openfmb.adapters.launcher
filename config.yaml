@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2022 Open Energy Solutions Inc
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+launcher:
+  log_level: Debug
+adapters: 
+  - name: iccp-client1
+    type: iccp-client
+    config: /tmp/adapter.yaml
+  - name: dnp3-master1
+    type: openfmb-adapter    
+    config: /tmp/adapter2.yaml  
+...
+
