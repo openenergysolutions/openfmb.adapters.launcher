@@ -63,7 +63,7 @@ fn launch(config: &mut LauncherConfig, rx: Receiver<()>) -> Result<(), ConfigErr
                     break;
                 }
 
-                for mut a in config.adapters.iter_mut() {
+                for a in config.adapters.iter_mut() {
                     if let Some(child) = &mut a.child {
                         match child.try_wait() {
                             Ok(status) => {
